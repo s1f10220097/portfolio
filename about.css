@@ -1,0 +1,141 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto; /* スクロールを有効化 */
+    font-family: 'Georgia', serif;
+    background-color: #faf7f5;
+}
+
+header {
+    height: 20%;
+    background-color: #e1dbd3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+header .home-button {
+    position: absolute;
+    top: -0.4rem; /* さらに上に寄せる */
+    left: -0.4rem; /* さらに左に寄せる */
+    color: #333; /* 文字色を濃いグレーに */
+    background: #f1eded; /* 背景色をf1ededに変更 */
+    padding: 0.5rem 1rem; /* 内側の余白はそのまま */
+    text-decoration: none; /* 下線を削除 */
+    border-radius: 0; /* 丸角をなくして長方形に */
+    font-weight: bold; /* 太字 */
+    border: 1px solid #e1dbd3; /* 必要に応じて境界線を追加 */
+}
+
+
+header .product-planner {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0; /* 下部に余白を追加 */
+    color: #333;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333; /* 下線を追加 */
+    padding-bottom: 0px; /* 下線とテキストの間隔を調整 */
+    position: relative; /* 位置調整用 */
+    top: 15px; /* 文字をさらに上に移動 */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 20;
+    color: #333;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav {
+    height: 20%;
+    background-color: #f1eded;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 横幅を画面全体に広げる */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+    padding: 0.02rem 3rem;
+}
+
+nav ul li a:hover {
+    background-color: #e1dbd3; /* ホバー時の背景色 */
+    color: #000; /* 必要に応じて文字色も変更可能 */
+}
+
+main {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf7f5;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 6rem; /* フッター分の余白を確保 */
+}
+
+.profile {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.profile h1 {
+    font-size: 2rem; /* フォントサイズを大きく設定 */
+    margin-top: 1rem; /* 上部に適切な余白を追加 */
+    color: #333; /* 文字色を濃いグレーに */
+}
+
+.profile h2 {
+    font-size: 1.5rem; /* 適切なフォントサイズ */
+    margin-top: 2rem; /* 上部に余白を追加 */
+    color: #333; /* 文字色を濃いグレーに */
+    border-bottom: 2px solid #333; /* 下線を追加 */
+    padding-bottom: 0rem; /* テキストと下線の間隔を調整 */
+    display: inline-block;
+}
+
+.profile img {
+    width: 250px; /* サイズを大きく設定 */
+    height: 250px; /* サイズを大きく設定 */
+    border-radius: 50%; /* 丸い形を維持 */
+    border: 5px solid #e1dbd3; /* #e1dbd3で縁取りを追加 */
+    box-shadow: none; /* 影を削除 */
+}
+
+.profile p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+footer {
+    height: 5%;
+    background-color: #e1dbd3;
+    width: 100%;
+    position: fixed; /* フッターを常に画面下部に固定 */
+    bottom: 0;
+}

@@ -1,0 +1,126 @@
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf7f5;
+    overflow: hidden; /* スクロールを無効化 */
+    height: 100%;
+}
+
+header {
+    height: 20%;
+    background-color: #e1dbd3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+header .product-planner {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0; /* 下部に余白を追加 */
+    color: #333;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333; /* 下線を追加 */
+    padding-bottom: 0px; /* 下線とテキストの間隔を調整 */
+    position: relative; /* 位置調整用 */
+    top: 15px; /* 文字をさらに上に移動 */
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 20;
+    color: #333;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav {
+    height: 15%;
+    background-color: #f1eded;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 横幅を画面全体に広げる */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+    background-color: #e1dbd3; /* ホバー時の背景色 */
+    color: #000; /* 必要に応じて文字色も変更可能 */
+}
+
+main {
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 50s linear infinite;
+}
+
+.carousel-track img {
+    flex-shrink: 0;
+    width: 100%; /* 横幅は画像の比率に従う */
+    height: auto; /* 縦幅を親要素に合わせる */
+    object-fit: cover; /* 比率を保持してエリアを埋める */
+    filter: brightness(60%) blur(3px); /* 画像を薄暗くし、ぼかしを追加 */
+    transition: filter 0.3s ease; /* ホバー時のエフェクトをスムーズに */
+}
+
+.carousel-track img:hover {
+    filter: brightness(100%) blur(0); /* ホバー時に元の明るさとぼかしを解除 */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-300%); /* 1つの画面分進む */
+    }
+}
+
+footer {
+    height: 5%;
+    background-color: #e1dbd3;
+    width: 100%;
+    position: fixed; /* フッターを常に画面下部に固定 */
+    bottom: 0;
+}
